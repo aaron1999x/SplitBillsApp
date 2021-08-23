@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.finalprojectsplit.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_addFriendScreen"
+            app:destination="@id/addFriendScreen" />
+        <action
+            android:id="@+id/action_mainFragment_to_searchFriendScreen"
+            app:destination="@id/searchFriendScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFriendScreen"
+        android:name="com.example.finalprojectsplit.addFriendScreen"
+        android:label="fragment_add_friend_screen"
+        tools:layout="@layout/fragment_add_friend_screen" />
+    <fragment
+        android:id="@+id/searchFriendScreen"
+        android:name="com.example.finalprojectsplit.searchFriendScreen"
+        android:label="fragment_search_friend_screen"
+        tools:layout="@layout/fragment_search_friend_screen" >
+        <action
+            android:id="@+id/action_searchFriendScreen_to_displayFriendScreen"
+            app:destination="@id/displayFriendScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayFriendScreen"
+        android:name="com.example.finalprojectsplit.displayFriendScreen"
+        android:label="fragment_display_friend_screen"
+        tools:layout="@layout/fragment_display_friend_screen" >
+        <action
+            android:id="@+id/action_displayFriendScreen_to_searchFriendScreen"
+            app:destination="@id/searchFriendScreen" />
+    </fragment>
+</navigation>
